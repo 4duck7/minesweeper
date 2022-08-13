@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.field {
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    float: left;
+}
+
+.input {
+    width: 50px;
+    margin: 5px;
+}
+
+.board {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.field {
+    color: blue;
+    background-color: #bfbfbf;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
