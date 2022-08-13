@@ -50,7 +50,7 @@ const render = {
 
     renderBombCounter: function () {
         let counter = document.createElement("div");
-        counter.innerHTML = 'Pozostałe bomby: ' + checksum.remainingBombs
+        counter.innerHTML = 'Remaining bombs: ' + checksum.remainingBombs
         if (document.getElementById('rbcounter') != undefined) {
             document.getElementById('rbcounter').remove()
             counter.id = 'rbcounter'
@@ -77,9 +77,9 @@ const czas = {
             let time = Date.now() - czas.start;
             if (czas.canMeasureTime) {
                 time = Math.floor(time / 1000)
-                render.timer.innerHTML = 'grasz: ' + time + 's';
+                render.timer.innerHTML = 'time: ' + time + 's';
             } else {
-                render.timer.innerHTML = 'twój rekord: ' + time + 'ms';
+                render.timer.innerHTML = 'your best score: ' + time + 'ms';
                 this.record = time;
                 clearInterval(startTime)
             }
@@ -390,9 +390,9 @@ const table = {
         if (expectedRemainingBombs == parseInt(board.bombQuantity)) {
             gameFinished = true;
             czas.canMeasureTime = false;
-            render.gameStatus.innerHTML = "Wygrałeś";
+            render.gameStatus.innerHTML = "You won";
             setTimeout(function () {
-                alert('Wygrałeś');
+                alert('You won');
             }, 10);
         }
     }
@@ -402,9 +402,9 @@ const endScreen = {
 
     render: function () {
         czas.canMeasureTime = false;
-        render.gameStatus.innerHTML = "Przegrałeś";
+        render.gameStatus.innerHTML = "You lost";
         setTimeout(function () {
-            alert('Przegrałeś');
+            alert('You lost');
         }, 10);
         // render.submit.classList.remove('hidden');
     },
